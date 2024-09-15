@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
         marqueeRef.current.querySelectorAll(".marquee-content");
 
       marqueeContent.forEach((marquee) => {
-        const distance = marquee.offsetWidth / 2;
+        const distance = (marquee as HTMLElement).offsetWidth / 2;
 
         gsap.to(marquee, {
           x: -distance,
